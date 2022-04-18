@@ -12,6 +12,7 @@ import Loading from '../Loading/Loading';
 const Login = () => {
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
+    const [error, setError] = useState('')
     const navigate = useNavigate();
    
     const [
@@ -49,8 +50,11 @@ const Login = () => {
 
     const handleSignIn = event =>{
         event.preventDefault()
+        if(!user){
+            setError('Please create an register')
+        }
         signInWithEmailAndPassword(email, password)
-        console.log(email,password)
+        
     }
     return (
             <div className='w-25 mx-auto border border-3 p-3 mt-5 mb-3'>
@@ -74,6 +78,7 @@ const Login = () => {
             <p>
               New to Tourist? <Link className='form-link' to='/register'>Create a account</Link>
            </p>
+           <p className='text-danger'>{error}</p>
             <div className='d-flex align-items-center mt-3'>
                 <div style={{height:'1px'}} className='w-50 bg-success'></div>
                 <p className='mt-2 px-3'>or</p>
