@@ -20,8 +20,8 @@ const Login = () => {
         user,loading
       ] = useSignInWithEmailAndPassword(auth);
 
-      const [signInWithGoogle, user2, loading2, error2] = useSignInWithGoogle(auth);
-      const [signInWithGithub, user3, loading3, error3] = useSignInWithGithub(auth);
+      const [signInWithGoogle, user2, error2] = useSignInWithGoogle(auth);
+      const [signInWithGithub, error3] = useSignInWithGithub(auth);
      
 
 

@@ -10,6 +10,7 @@ import Chackout from './page/ChackOut/Chackout';
 import Services from './page/Services/Services/Services';
 import RequireAuth from './page/RequireAuth/RequireAuth';
 import Blogs from './page/Blogs/Blogs';
+import Footer from './page/Footer/Footer';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+        <Footer></Footer>
     </div>
   );
 }

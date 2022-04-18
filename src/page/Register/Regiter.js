@@ -20,7 +20,7 @@ const Regiter = () => {
         createUserWithEmailAndPassword,
         user,
         loading,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
       const [signInWithGoogle, user2, loading2, error3] = useSignInWithGoogle(auth);
       const [signInWithGithub, user3, loading3, error4] = useSignInWithGithub(auth);
      
