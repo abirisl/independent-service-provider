@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Cox's Bazar",
+        "img": "https://i.ibb.co/CMPDMRM/coxsbazar.jpg",
+        "price": 108,
+        "discription": "There are 20 tourist attractions found in Cox's Bazar. This is 11% of all tourist attractions listed in Chittagong Division. The major types of tourist attractions listed here are nature attractions and zoos. Then there is also landmarks listed in Cox's Bazar."
+    },
+    {
+        "id": 2,
+        "name": "Sajek",
+        "img": "https://i.ibb.co/zSpmx6C/sajek.jpg",
+        "price": 94,
+        "discription": "Sajek valley is known for its natural environment and is surrounded by mountains, dense forest, and grassland hill tracks. Many small rivers flow through the mountains among which the Kachalong and the Machalong are notable. On the way to Sajek valley, one has to cross the Mayni range and the Mayni river."
+    },
+    {
+        "id": 3,
+        "name": "Sent-Martin",
+        "img": "https://i.ibb.co/LJ9M7vn/sentmartin.jpg",
+        "price": 150,
+        "discription": "Saint Martin Island is a small island located in the south of the border of Bangladesh and the north-east part of the Bay of Bengal.  Saint Martin Island is one of the most interesting and popular tourist destinations in Bangladesh."
+    },
+    {
+        "id": 4,
+        "name": "Srinagar",
+        "img":"https://i.ibb.co/5kZXN6j/srinagar.jpg",
+        "price": 65,
+        "discription": "Surrounded by the Himalayan Mountains; adorned with the beautiful Mughal gardens and the tranquil Dal & Nigeen lakes, Srinagar is rightly referred to as the ‘Land of Lakes and Gardens’. This beautiful place also boasts being one of the dream travel destinations in India for honeymooners and family vacationers."
+    },
+    {
+        "id": 5,
+        "name": "Lokkonchora",
+        "img": "https://i.ibb.co/BTpz42h/lokkonchora.jpg",
+        "price": 85,
+        "discription": "Lokhonchora is not far away from the Bishanakandi and Panatumai. So, before going to Panthumai Jhorna, you can easily go to Lookhonchora. There is also a bridge for movement on the Indian border. At the bottom of this bridge, a large number of bigger stones have come up in an unusual way to create a beautiful beautiful way, which is very pleasant to see"
+    }
+]
