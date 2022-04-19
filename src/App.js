@@ -23,7 +23,11 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Regiter></Regiter>}></Route>
-        <Route path='service/:serviceId' element={<Chackout></Chackout>}></Route>
+        <Route path='service/:serviceId' element={
+          <RequireAuth>
+            <Chackout></Chackout>
+          </RequireAuth>
+        }></Route>
         <Route path='/chackout' element={
           <RequireAuth>
           <Chackout></Chackout>

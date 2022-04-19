@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
-import Service from '../Service/Service';
+import Review from '../review/Review';
 
-
-const Services = () => {
+const Reviews = () => {
     const [cards, setCard] = useState([]);
 
     useEffect(() =>{
-        fetch('data.json')
+        fetch('clientData.json')
         .then(res => res.json())
         .then(data => setCard(data))
     }, [])
     return (
 
         <div>
-            <h2 className='mt-5 text-center text-primary '>Our Services</h2>
+            <h2 className='mt-5 text-center text-danger '>My Client Review</h2>
             <hr className='w-25 mx-auto text-danger'/>
            <div className='p-5'>
            <Row xs={1} md={3} className="g-4">
            {
-               cards.map(card => <Service key={card.id} card={card}></Service>)
+               cards.map(card => <Review key={card.id} card={card}></Review>)
            }
         </Row>
            </div>
@@ -28,4 +27,5 @@ const Services = () => {
     );
 };
 
-export default Services;
+
+export default Reviews;

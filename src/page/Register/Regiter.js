@@ -21,13 +21,12 @@ const Regiter = () => {
         user,
         loading,
       ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
-      const [signInWithGoogle, user2, loading2, error3] = useSignInWithGoogle(auth);
-      const [signInWithGithub, user3, loading3, error4] = useSignInWithGithub(auth);
+      const [signInWithGoogle, error3] = useSignInWithGoogle(auth);
+      const [signInWithGithub ] = useSignInWithGithub(auth);
      
 
 
       let errorElement;
-      let errorMessage;
       const handleEmailBlur = event =>{
           setEmail(event.target.value)
       }

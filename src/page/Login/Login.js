@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
 import { Button, Form, Row } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import google from '../../images/google.png';
 import facebook from '../../images/facebook.png';
 import github from '../../images/github.png';
 import auth from '../../Firebase.init';
-import { useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import Loading from '../Loading/Loading';
 
 
 const Login = () => {
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
-    const [error, setError] = useState('')
+    const [error, setError] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
    
     const [
         signInWithEmailAndPassword,
         user,loading
       ] = useSignInWithEmailAndPassword(auth);
+      const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
       const [signInWithGoogle, user2, error2] = useSignInWithGoogle(auth);
       const [signInWithGithub, error3] = useSignInWithGithub(auth);
@@ -31,6 +33,10 @@ const Login = () => {
     }
     const handlePasswordBlur = event =>{
         setPassword(event.target.value)
+    }
+    const resetPassword =async () =>{
+        await sendPasswordResetEmail(email);
+          alert('Sent email');
     }
     if (user) {
         navigate('/home')
@@ -56,6 +62,13 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
         
     }
+   
+    let from = location.state?.from?.pathname || "/home";
+
+    if (user) {
+      navigate(from, { replace: true });
+    }
+   
     return (
             <div className='w-25 mx-auto border border-3 p-3 mt-5 mb-3'>
             <Form onSubmit={handleSignIn}>
@@ -78,6 +91,7 @@ const Login = () => {
             <p>
               New to Tourist? <Link className='form-link' to='/register'>Create a account</Link>
            </p>
+           <p>Forget password?<Link to='/register' onClick={resetPassword}>reset password</Link></p>
            <p className='text-danger'>{error}</p>
             <div className='d-flex align-items-center mt-3'>
                 <div style={{height:'1px'}} className='w-50 bg-success'></div>
