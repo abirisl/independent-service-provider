@@ -8,7 +8,7 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <div style={{height:260}} className='bg-primary text-light'>
+        <div style={{height:380}} className='bg-primary text-light'>
             <div className=' d-flex p-4'>
             <div className='me-4 '>
             <h3>Information</h3>
@@ -34,17 +34,17 @@ const Footer = () => {
                 <h6>Guide</h6>
                 <h6>Support 24/7</h6>
             </div>
-            <div className='mx-auto mt-5'>
-                <div className=' d-flex'>
-                <div className='p-2'><Facebook></Facebook></div>
-                <div className='p-2'><Instagram></Instagram></div>
-                <div className='p-2'><Linkedin></Linkedin></div>
-                </div>
-                <p>mohammadmehedihasan84@gmail.com</p>
-            </div>
             </div>
             <div className='text-center'>
-               <p><small> MH Abir copyright @ {year}</small></p>
+                <div className=' d-flex'>
+                <div className='mx-auto'>
+                <span><Facebook></Facebook></span>
+                <span className='p-2'><Instagram></Instagram></span>
+                <span><Linkedin></Linkedin></span>
+                </div>
+                </div>
+                <p>mohammadmehedihasan84@gmail.com</p>
+                <p><small> MH Abir copyright @ {year}</small></p>
             </div>
         </div>
     );   
