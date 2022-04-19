@@ -8,9 +8,9 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <div style={{height:380}} className='bg-primary text-light'>
+        <div style={{height:400}} className='bg-primary text-light'>
             <div className=' d-flex p-4'>
-            <div className='me-4 '>
+            <div className='me-3'>
             <h3>Information</h3>
             <br />
             <h6>About My Service</h6>
@@ -18,7 +18,7 @@ const Footer = () => {
             <h6>Blog</h6>
             <h6>Testimonial</h6>
             </div>
-            <div className='me-5'>
+            <div className='me-3'>
                 <h3>Helpful Links</h3>
                 <br />
                 <h6>Services</h6>
@@ -26,7 +26,7 @@ const Footer = () => {
                 <h6>Terms And Condition</h6>
                 <h6>Privacy</h6>
             </div>
-            <div className=''>
+            <div>
                 <h3>My Services</h3>
                 <br />
                 <h6>Travel Guide</h6>
